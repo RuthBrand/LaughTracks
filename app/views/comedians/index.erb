@@ -1,0 +1,18 @@
+<div>
+ <div id = "comedian_stats"
+  <div>
+   <% @comedians.each do |comedian| %>
+     <ul>
+      <li><%=comedian.name%></li>
+      <li><%=comedian.city%></li>
+      <li><%=comedian.age%></li>
+      <% comedian.specials.each do |special| %>
+      <li><%=special.name%></li>
+      <li><%=special.run_time%></li>
+      <li><%=special.image_url%></li>
+      <% end %>
+     </ul>
+  <% end %>
+  <div>
+ </div>
+</div>
