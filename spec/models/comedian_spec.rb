@@ -17,4 +17,17 @@ RSpec.describe Comedian do
       end
     end
   end
+  describe 'statistics' do
+    describe 'comedian statistics' do
+      it 'shows average age of all comedians' do
+        robin = Comedian.create(name: "Robin Williams", age: 63, city: "Chicago, IL")
+        victor = Comedian.create(name: "Victor Borge", age: 91, city: "Copenhagen, Denmark")
+
+        average = Comedian.average_age
+        expected_result = 77
+
+        expect(average).to eq (expected_result)
+      end
+    end
+  end
 end

@@ -84,6 +84,16 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/ruthbrand/turing/mod_two/laugh_tracks/LaughTracks/spec/models/special_spec.rb": [
@@ -104,6 +114,6 @@
         null
       ]
     },
-    "timestamp": 1538863806
+    "timestamp": 1538868061
   }
 }

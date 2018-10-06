@@ -1,21 +1,20 @@
 <div>
- <div id = "comedian_stats"
-  <div>
-
-   <% @comedians.each do |comedian| %>
-     <ul class="comedians">
-      <li><%=comedian.name%></li>
-      <li><%=comedian.city%></li>
-      <li><%=comedian.age%></li>
-      <% comedian.specials.each do |special| %>
-      <ul class="specials">
-        <li><%=special.name%></li>
-        <li><%=special.run_time%></li>
-        <img src=<%=special.image_url%> />
-      </ul>
-      <% end %>
-     </ul>
-  <% end %>
-  <div>
+ <div id = "statistics">
  </div>
+
+ <div id = "comedian_stats">
+ <% @comedians.each do |comedian| %>
+   <ul class="comedians">
+    <li><%=comedian.name%></li>
+    <li><%=comedian.city%></li>
+    <li><%=comedian.age%></li>
+    <% comedian.specials.each do |special| %>
+    <ul class="specials">
+      <li><%=special.name%></li>
+      <li><%=special.run_time%></li>
+      <img src=<%=special.image_url%> />
+    </ul>
+    <% end %>
+   </ul>
+<% end %>
 </div>
