@@ -57,5 +57,31 @@ RSpec.describe 'as a visitor' do
        expect(page).to have_css('img[src="https://m.media-amazon.com/images/M/MV5BMTU0NjA0ODk1Ml5BMl5BanBnXkFtZTcwNTU4OTAwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg"]')
      end
    end
+
+   it 'i should only see comedians that match certain parameters' do
+     comedian = Comedian.create(name: "Lord Varys", age: 45, city: "Kings Landing")
+     comedian_two = Comedian.create(name: "Tyrion Lannister", age: 34, city: "The Vale")
+
+     visit `/comedians?age=34`
+
+     expect(page).to have_content("Tyrion Lannister")
+     expect(page).to_not have_content("Lord Varys")
+    end
   end
+
 end
+
+#
+# As a visitor
+# When I visit `/comedians?age=34`
+
+#ok so fifrst off i otta make a controller that says go to a page
+#then on that pgge filter shit and whatever
+#at least i think so 
+# Then I see the list of comedians on the page only shows
+# comedians who match the age criteria.
+#
+# - All other information on the page is still expected to be present
+# - Testing should check that excluded comedians do not show up.
+
+#test to and to_not

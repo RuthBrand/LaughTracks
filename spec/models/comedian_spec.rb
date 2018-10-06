@@ -17,6 +17,7 @@ RSpec.describe Comedian do
       end
     end
   end
+
   describe 'statistics' do
     describe 'comedian statistics' do
       it 'shows average age of all comedians' do
@@ -30,4 +31,13 @@ RSpec.describe Comedian do
       end
     end
   end
+
+  # describe 'parameters' do
+  #   describe 'comedian paramaters' do
+  #     it 'shows only comedians whose age matches given params'
+  #     robin = Comedian.create(name: "Robin Williams", age: 63, city: "Chicago, IL")
+  #     victor = Comedian.create(name: "Victor Borge", age: 91, city: "Copenhagen, Denmark")
+  #
+  
+
 end

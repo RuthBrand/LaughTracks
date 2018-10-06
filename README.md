@@ -78,13 +78,14 @@ I also see each special's run-time length in minutes, and a thumbnail image.
 
 ```
 User Story 4
-
+# come back to this, do run length and list of cities and unique list
 As a visitor
 When I visit `/comedians`
 Then I see an area at the top of the page called 'Statistics'
 In that 'Statistics' area, I see the following information:
 - the average age of all comedians on the page
 - the average run length of every TV special on the page
+--- only list each city once
 - a unique list of cities for each comedian on the page
 
 Averaging and uniqueness should be done in ActiveRecord NOT
@@ -119,9 +120,9 @@ User Story 7
 As a visitor
 When I visit `/comedians?age=34`
 Then I see a list of all comedians with an age of 34
-Just like a previous User Story, BUT all other statistics 
-information in the 'Statistics' area of the page should be limited 
-to reflect only the information about the comedians listed on 
+Just like a previous User Story, BUT all other statistics
+information in the 'Statistics' area of the page should be limited
+to reflect only the information about the comedians listed on
 the page.
 
 - Testing should ensure that calculated statistics are
