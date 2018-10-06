@@ -7,9 +7,11 @@
       <li><%=comedian.city%></li>
       <li><%=comedian.age%></li>
       <% comedian.specials.each do |special| %>
-      <li><%=special.name%></li>
-      <li><%=special.run_time%></li>
-      <li><%=special.image_url%></li>
+      <ul>
+        <li><%=special.name%></li>
+        <li><%=special.run_time%></li>
+        <img src=<%=special.image_url%> /> 
+      </ul>
       <% end %>
      </ul>
   <% end %>
