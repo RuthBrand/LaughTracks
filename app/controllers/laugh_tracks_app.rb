@@ -6,6 +6,7 @@ class LaughTracksApp < Sinatra::Base
      else
      @comedians = Comedian.all
     end
+    @specials = Special.all
     erb :"comedians/index"
   end
 
