@@ -7,6 +7,10 @@ body {
    background-size: cover;
 }
 
+.statistics {
+  color: white;
+}
+
 .specials img {
   width: 15%;
   height: auto;

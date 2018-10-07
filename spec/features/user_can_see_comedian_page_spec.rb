@@ -58,30 +58,33 @@ RSpec.describe 'as a visitor' do
      end
    end
 
-   it 'i should only see comedians that match certain parameters' do
+   it 'i should only see comedians with a certain age' do
      comedian = Comedian.create(name: "Lord Varys", age: 45, city: "Kings Landing")
-     comedian_two = Comedian.create(name: "Tyrion Lannister", age: 34, city: "The Vale")
+     comedian_two = Comedian.create(name: "Tyrion Lannister", age: 36, city: "Kings Landing")
 
-     visit `/comedians?age=34`
+     visit '/comedians?age=36'
 
+     within('#comedian_stats') do
      expect(page).to have_content("Tyrion Lannister")
      expect(page).to_not have_content("Lord Varys")
+   end
+  end
+end
+end
+
+
+  describe 'Statistics' do
+    describe 'Overall Statistics' do
+  it 'i should see the comedians average age in the statistics bar' do
+    comedian = Comedian.create(name: "Lord Varys", age: 45, city: "Kings Landing")
+    comedian_two = Comedian.create(name: "Tyrion Lannister", age: 36, city: "Kings Landing")
+
+    visit '/comedians'
+
+    within('#statistics') do
+      expect(page).to have_content (40.5)
     end
   end
 
 end
-
-#
-# As a visitor
-# When I visit `/comedians?age=34`
-
-#ok so fifrst off i otta make a controller that says go to a page
-#then on that pgge filter shit and whatever
-#at least i think so 
-# Then I see the list of comedians on the page only shows
-# comedians who match the age criteria.
-#
-# - All other information on the page is still expected to be present
-# - Testing should check that excluded comedians do not show up.
-
-#test to and to_not
+end
