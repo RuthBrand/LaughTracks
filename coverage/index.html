@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-06T20:33:02-06:00">2018-10-06T20:33:02-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-07T17:46:47-06:00">2018-10-07T17:46:47-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>3</b> files in total.
-    <b>105</b> relevant lines. 
-    <span class="green"><b>105</b> lines covered</span> and
+    <b>150</b> relevant lines. 
+    <span class="green"><b>150</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,9 +53,9 @@
       <tr>
         <td class="strong"><a href="#e2903821c05b7ac5f8ad39b134d45c92ec6f0e69" class="src_link" title="spec/features/user_can_see_comedian_page_spec.rb">spec/features/user_can_see_comedian_page_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>109</td>
-        <td>63</td>
-        <td>63</td>
+        <td>179</td>
+        <td>102</td>
+        <td>102</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -63,9 +63,9 @@
       <tr>
         <td class="strong"><a href="#542d01b889503f360b7263b01472bcf32e2e6229" class="src_link" title="spec/models/comedian_spec.rb">spec/models/comedian_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>43</td>
-        <td>20</td>
-        <td>20</td>
+        <td>70</td>
+        <td>26</td>
+        <td>26</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -101,8 +101,8 @@
     <h3>spec/features/user_can_see_comedian_page_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>63</b> relevant lines. 
-      <span class="green"><b>63</b> lines covered</span> and
+      <b>102</b> relevant lines. 
+      <span class="green"><b>102</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -395,25 +395,25 @@
         <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
-          <code class="ruby">   it &#39;i should see a thumbnail image of the specials&#39; do</code>
+          <code class="ruby">   it &#39;i should see the total amount of specials for each comedian&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="49">
           
-          <code class="ruby">     comedian = Comedian.create(name: &quot;Lord Varys&quot;, age: 45, city: &quot;Kings Landing&quot;)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="50">
           <span class="hits">1</span>
           
-          <code class="ruby">     special = Special.create(name: &quot;The Rise of Cersei Lannister&quot;, run_time: 100, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTU0NjA0ODk1Ml5BMl5BanBnXkFtZTcwNTU4OTAwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg&quot;, comedian_id: 1)</code>
+          <code class="ruby">     robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
-          <code class="ruby">     special_two = Special.create(name: &quot;Tywin&#39;s Humour 101&quot;, run_time: 2, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTU0NjA0ODk1Ml5BMl5BanBnXkFtZTcwNTU4OTAwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg&quot;, comedian_id: 1)</code>
+          <code class="ruby">     victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Copenhagen, Denmark&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
@@ -422,46 +422,46 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="53">
-          <span class="hits">1</span>
-          
-          <code class="ruby">     visit &#39;/comedians&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">     robin.specials.create(name: &quot;Weapons of Self Destruction&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc2NTg2OTQ0OV5BMl5BanBnXkFtZTcwNTcyNjgxMw@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">     within(&#39;#comedian_stats&#39;) do</code>
+          <code class="ruby">     robin.specials.create(name: &quot;Robin Williams Live at the Met&quot;, run_time: 65, image_url: &quot;https://m.media-amazon.com/images/M/MV5BYzM0Zjc0OWItYWI1MC00NjQwLWE4YTktYWY1MDQyYjM3NjRkXkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">       expect(page).to have_css(&#39;img[src=&quot;https://m.media-amazon.com/images/M/MV5BMTU0NjA0ODk1Ml5BMl5BanBnXkFtZTcwNTU4OTAwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg&quot;]&#39;)</code>
+          <code class="ruby">     robin.specials.create(name: &quot;The Aristocrats&quot;, run_time: 89, image_url: &quot;https://m.media-amazon.com/images/M/MV5BZGQ0NmI1N2EtYzdkYy00NzFmLThlYTMtOWViYjQyOGQ2OWVlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
-          <code class="ruby">       expect(page).to have_css(&#39;img[src=&quot;https://m.media-amazon.com/images/M/MV5BMTU0NjA0ODk1Ml5BMl5BanBnXkFtZTcwNTU4OTAwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg&quot;]&#39;)</code>
+          <code class="ruby">     victor.specials.create(name: &quot;The Best of Victor Borge, Act One and Two&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc3MzQxMTcwMF5BMl5BanBnXkFtZTcwODM5ODUxMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">     end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">   end</code>
+          <code class="ruby">     victor.specials.create(name: &quot;The King of Comedy&quot;, run_time: 110, image_url: &quot;https://m.media-amazon.com/images/M/MV5BNTAyNDM0OGMtMmQ5OS00OGJiLTljMDUtY2Y1OTFlYmM2ZTk2XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
@@ -473,79 +473,79 @@
         <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
-          <code class="ruby">   it &#39;i should only see comedians with a certain age&#39; do</code>
+          <code class="ruby">     visit &#39;/comedians&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="62">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="62">
           
-          <code class="ruby">     comedian = Comedian.create(name: &quot;Lord Varys&quot;, age: 45, city: &quot;Kings Landing&quot;)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">     comedian_two = Comedian.create(name: &quot;Tyrion Lannister&quot;, age: 36, city: &quot;Kings Landing&quot;)</code>
+          <code class="ruby">     within(&#39;#comedian_stats&#39;) do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">       expect(page).to have_content(3)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
-          <code class="ruby">     visit &#39;/comedians?age=36&#39;</code>
+          <code class="ruby">       expect(page).to have_content(2)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">     end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="67">
-          <span class="hits">1</span>
-          
-          <code class="ruby">     within(&#39;#comedian_stats&#39;) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="68">
-          <span class="hits">1</span>
-          
-          <code class="ruby">     expect(page).to have_content(&quot;Tyrion Lannister&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="69">
-          <span class="hits">1</span>
-          
-          <code class="ruby">     expect(page).to_not have_content(&quot;Lord Varys&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="never" data-hits="" data-linenumber="67">
           
           
           <code class="ruby">   end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="71">
+        <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
+        <li class="never" data-hits="" data-linenumber="69">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
           
+          <code class="ruby">   it &#39;i should see a thumbnail image of the specials&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
           
-          <code class="ruby">end</code>
+          <code class="ruby">     comedian = Comedian.create(name: &quot;Lord Varys&quot;, age: 45, city: &quot;Kings Landing&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">     special = Special.create(name: &quot;The Rise of Cersei Lannister&quot;, run_time: 100, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTU0NjA0ODk1Ml5BMl5BanBnXkFtZTcwNTU4OTAwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg&quot;, comedian_id: 1)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">     special_two = Special.create(name: &quot;Tywin&#39;s Humour 101&quot;, run_time: 2, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTU0NjA0ODk1Ml5BMl5BanBnXkFtZTcwNTU4OTAwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg&quot;, comedian_id: 1)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
@@ -554,82 +554,82 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">     visit &#39;/comedians&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="76">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &#39;Statistics&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="77">
           <span class="hits">1</span>
           
-          <code class="ruby">    describe &#39;Overall Statistics&#39; do</code>
+          <code class="ruby">     within(&#39;#comedian_stats&#39;) do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;i should see the comedians average age in the statistics bar&#39; do</code>
+          <code class="ruby">       expect(page).to have_css(&#39;img[src=&quot;https://m.media-amazon.com/images/M/MV5BMTU0NjA0ODk1Ml5BMl5BanBnXkFtZTcwNTU4OTAwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg&quot;]&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
-          <code class="ruby">    comedian = Comedian.create(name: &quot;Lord Varys&quot;, age: 45, city: &quot;Kings Landing&quot;)</code>
+          <code class="ruby">       expect(page).to have_css(&#39;img[src=&quot;https://m.media-amazon.com/images/M/MV5BMTU0NjA0ODk1Ml5BMl5BanBnXkFtZTcwNTU4OTAwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg&quot;]&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="80">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="80">
           
-          <code class="ruby">    comedian_two = Comedian.create(name: &quot;Tyrion Lannister&quot;, age: 36, city: &quot;Kings Landing&quot;)</code>
+          
+          <code class="ruby">     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="81">
           
           
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
+        <li class="covered" data-hits="1" data-linenumber="83">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit &#39;/comedians&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="83">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">   it &#39;i should only see comedians with a certain age&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="84">
           <span class="hits">1</span>
           
-          <code class="ruby">    within(&#39;#statistics&#39;) do</code>
+          <code class="ruby">     comedian = Comedian.create(name: &quot;Lord Varys&quot;, age: 45, city: &quot;Kings Landing&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="85">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_content (40.5)</code>
+          <code class="ruby">     comedian_two = Comedian.create(name: &quot;Tyrion Lannister&quot;, age: 36, city: &quot;Kings Landing&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="86">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">     visit &#39;/comedians?age=36&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
@@ -641,49 +641,49 @@
         <li class="covered" data-hits="1" data-linenumber="89">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;i should see the average run time of all the specials in the statistics bar&#39; do</code>
+          <code class="ruby">     within(&#39;#comedian_stats&#39;) do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
-          <code class="ruby">    robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
+          <code class="ruby">     expect(page).to have_content(&quot;Tyrion Lannister&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="91">
           <span class="hits">1</span>
           
-          <code class="ruby">    victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Copenhagen, Denmark&quot;)</code>
+          <code class="ruby">     expect(page).to_not have_content(&quot;Lord Varys&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="92">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="92">
           
-          <code class="ruby">    require &#39;pry&#39;; binding.pry</code>
+          
+          <code class="ruby">   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="93">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="94">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    robin.specials.create(name: &quot;Weapons of Self Destruction&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc2NTg2OTQ0OV5BMl5BanBnXkFtZTcwNTcyNjgxMw@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="95">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    robin.specials.create(name: &quot;Robin Williams Live at the Met&quot;, run_time: 65, image_url: &quot;https://m.media-amazon.com/images/M/MV5BYzM0Zjc0OWItYWI1MC00NjQwLWE4YTktYWY1MDQyYjM3NjRkXkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="96">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    robin.specials.create(name: &quot;The Aristocrats&quot;, run_time: 89, image_url: &quot;https://m.media-amazon.com/images/M/MV5BZGQ0NmI1N2EtYzdkYy00NzFmLThlYTMtOWViYjQyOGQ2OWVlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="97">
@@ -695,70 +695,490 @@
         <li class="covered" data-hits="1" data-linenumber="98">
           <span class="hits">1</span>
           
-          <code class="ruby">    victor.specials.create(name: &quot;The Best of Victor Borge, Act One and Two&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc3MzQxMTcwMF5BMl5BanBnXkFtZTcwODM5ODUxMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+          <code class="ruby">  describe &#39;Statistics&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
-          <code class="ruby">    victor.specials.create(name: &quot;The King of Comedy&quot;, run_time: 110, image_url: &quot;https://m.media-amazon.com/images/M/MV5BNTAyNDM0OGMtMmQ5OS00OGJiLTljMDUtY2Y1OTFlYmM2ZTk2XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+          <code class="ruby">    describe &#39;Overall Statistics&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="covered" data-hits="1" data-linenumber="100">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  it &#39;i should see the comedians average age in the statistics bar&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="101">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit &#39;/comedians&#39;</code>
+          <code class="ruby">    comedian = Comedian.create(name: &quot;Lord Varys&quot;, age: 45, city: &quot;Kings Landing&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="103">
+        <li class="covered" data-hits="1" data-linenumber="102">
           <span class="hits">1</span>
           
-          <code class="ruby">    within(&#39;#statistics&#39;) do</code>
+          <code class="ruby">    comedian_two = Comedian.create(name: &quot;Tyrion Lannister&quot;, age: 36, city: &quot;Kings Landing&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="104">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(page). to have_content (88.8)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="105">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="106">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="107">
+        <li class="never" data-hits="" data-linenumber="103">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &#39;/comedians&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="105">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    within(&#39;#statistics&#39;) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="107">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(page).to have_content (40.5)</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;i should see the average run time of all the specials in the statistics bar&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Copenhagen, Denmark&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin.specials.create(name: &quot;Weapons of Self Destruction&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc2NTg2OTQ0OV5BMl5BanBnXkFtZTcwNTcyNjgxMw@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin.specials.create(name: &quot;Robin Williams Live at the Met&quot;, run_time: 65, image_url: &quot;https://m.media-amazon.com/images/M/MV5BYzM0Zjc0OWItYWI1MC00NjQwLWE4YTktYWY1MDQyYjM3NjRkXkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin.specials.create(name: &quot;The Aristocrats&quot;, run_time: 89, image_url: &quot;https://m.media-amazon.com/images/M/MV5BZGQ0NmI1N2EtYzdkYy00NzFmLThlYTMtOWViYjQyOGQ2OWVlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor.specials.create(name: &quot;The Best of Victor Borge, Act One and Two&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc3MzQxMTcwMF5BMl5BanBnXkFtZTcwODM5ODUxMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="121">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor.specials.create(name: &quot;The King of Comedy&quot;, run_time: 110, image_url: &quot;https://m.media-amazon.com/images/M/MV5BNTAyNDM0OGMtMmQ5OS00OGJiLTljMDUtY2Y1OTFlYmM2ZTk2XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="122">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="123">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &#39;/comedians&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="124">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="125">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    within(&#39;#statistics&#39;) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="126">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(page).to have_content (88.8)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="128">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="129">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;only shows each city once&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="131">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="132">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Chicago, IL&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="134">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &#39;/comedians&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="135">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="136">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    within(&#39;#statistics&#39;) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="137">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(page).to have_content(&quot;Chicago, IL&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="141">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;shows the total specials for all comedians&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="142">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Copenhagen, Denmark&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin.specials.create(name: &quot;Weapons of Self Destruction&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc2NTg2OTQ0OV5BMl5BanBnXkFtZTcwNTcyNjgxMw@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin.specials.create(name: &quot;Robin Williams Live at the Met&quot;, run_time: 65, image_url: &quot;https://m.media-amazon.com/images/M/MV5BYzM0Zjc0OWItYWI1MC00NjQwLWE4YTktYWY1MDQyYjM3NjRkXkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="148">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin.specials.create(name: &quot;The Aristocrats&quot;, run_time: 89, image_url: &quot;https://m.media-amazon.com/images/M/MV5BZGQ0NmI1N2EtYzdkYy00NzFmLThlYTMtOWViYjQyOGQ2OWVlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="150">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor.specials.create(name: &quot;The Best of Victor Borge, Act One and Two&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc3MzQxMTcwMF5BMl5BanBnXkFtZTcwODM5ODUxMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="151">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor.specials.create(name: &quot;The King of Comedy&quot;, run_time: 110, image_url: &quot;https://m.media-amazon.com/images/M/MV5BNTAyNDM0OGMtMmQ5OS00OGJiLTljMDUtY2Y1OTFlYmM2ZTk2XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &#39;/comedians&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="155">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    within(&#39;#statistics&#39;) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="156">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(page).to have_content(5)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;shows total specials for comedian when selected by parameters&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="161">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="162">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Copenhagen, Denmark&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="164">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin.specials.create(name: &quot;Weapons of Self Destruction&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc2NTg2OTQ0OV5BMl5BanBnXkFtZTcwNTcyNjgxMw@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin.specials.create(name: &quot;Robin Williams Live at the Met&quot;, run_time: 65, image_url: &quot;https://m.media-amazon.com/images/M/MV5BYzM0Zjc0OWItYWI1MC00NjQwLWE4YTktYWY1MDQyYjM3NjRkXkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="166">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    robin.specials.create(name: &quot;The Aristocrats&quot;, run_time: 89, image_url: &quot;https://m.media-amazon.com/images/M/MV5BZGQ0NmI1N2EtYzdkYy00NzFmLThlYTMtOWViYjQyOGQ2OWVlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="167">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="168">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor.specials.create(name: &quot;The Best of Victor Borge, Act One and Two&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc3MzQxMTcwMF5BMl5BanBnXkFtZTcwODM5ODUxMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="169">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    victor.specials.create(name: &quot;The King of Comedy&quot;, run_time: 110, image_url: &quot;https://m.media-amazon.com/images/M/MV5BNTAyNDM0OGMtMmQ5OS00OGJiLTljMDUtY2Y1OTFlYmM2ZTk2XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="170">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="171">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &#39;/comedians?age=63&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="172">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="173">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    within(&#39;#statistics&#39;) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="174">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(page).to have_content(3)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="176">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="177">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="178">
           
           
           <code class="ruby"> end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="109">
+        <li class="never" data-hits="" data-linenumber="179">
           
           
           <code class="ruby">end</code>
@@ -774,8 +1194,8 @@
     <h3>spec/models/comedian_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>26</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -918,7 +1338,7 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;shows average age of all comedians&#39; do</code>
+          <code class="ruby">      it &#39;calculates average age of all comedians&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
@@ -972,73 +1392,235 @@
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
+          <code class="ruby">      it &#39;makes it so that each city only shows once in statistics bar&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
-          <code class="ruby">  # describe &#39;parameters&#39; do</code>
+          <code class="ruby">        robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Chicago, IL&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">  #   describe &#39;comedian paramaters&#39; do</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #     it &#39;shows only comedians whose age matches given params&#39;</code>
+          <code class="ruby">        cities = Comedian.unique_cities.join</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby">  #     robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #     victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Copenhagen, Denmark&quot;)</code>
+          <code class="ruby">        expected_result= &quot;Chicago, IL&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  </code>
+          <code class="ruby">        expect(cities). to eq (expected_result)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">    #  it &#39;should show me a count of each comedians tv specials&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">    #    robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    #    victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Copenhagen, Denmark&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">    #    robin.specials.create(name: &quot;Weapons of Self Destruction&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc2NTg2OTQ0OV5BMl5BanBnXkFtZTcwNTcyNjgxMw@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">    #    robin.specials.create(name: &quot;Robin Williams Live at the Met&quot;, run_time: 65, image_url: &quot;https://m.media-amazon.com/images/M/MV5BYzM0Zjc0OWItYWI1MC00NjQwLWE4YTktYWY1MDQyYjM3NjRkXkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">    #    robin.specials.create(name: &quot;The Aristocrats&quot;, run_time: 89, image_url: &quot;https://m.media-amazon.com/images/M/MV5BZGQ0NmI1N2EtYzdkYy00NzFmLThlYTMtOWViYjQyOGQ2OWVlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">    #    victor.specials.create(name: &quot;The Best of Victor Borge, Act One and Two&quot;, run_time: 90, image_url: &quot;https://m.media-amazon.com/images/M/MV5BMTc3MzQxMTcwMF5BMl5BanBnXkFtZTcwODM5ODUxMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">    #    victor.specials.create(name: &quot;The King of Comedy&quot;, run_time: 110, image_url: &quot;https://m.media-amazon.com/images/M/MV5BNTAyNDM0OGMtMmQ5OS00OGJiLTljMDUtY2Y1OTFlYmM2ZTk2XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">    #   robins_specials = robin.total_specials</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">    #   victors_specials = victor.total_specials</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">    #   expect(robins_specials). to eq(3)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">    #   expect(victors_specials). to eq(2)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">    # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
           <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">  # describe &#39;parameters&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">  #   describe &#39;comedian paramaters&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">  #     it &#39;shows only comedians whose age matches given params&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">  #     robin = Comedian.create(name: &quot;Robin Williams&quot;, age: 63, city: &quot;Chicago, IL&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">  #     victor = Comedian.create(name: &quot;Victor Borge&quot;, age: 91, city: &quot;Copenhagen, Denmark&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">  #</code>
         </li>
       
     </ol>
@@ -1159,7 +1741,7 @@
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">        it &#39;should give average run time of all specials&#39; do</code>
+          <code class="ruby">        it &#39;gives average run time of all specials&#39; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">

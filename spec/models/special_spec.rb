@@ -14,7 +14,7 @@ RSpec.describe Special do
 
     describe 'Statistics' do
       describe 'Specials statistics' do
-        it 'should give average run time of all specials' do
+        it 'gives average run time of all specials' do
 
           robin = Comedian.create(name: "Robin Williams", age: 63, city: "Chicago, IL")
           victor = Comedian.create(name: "Victor Borge", age: 91, city: "Copenhagen, Denmark")

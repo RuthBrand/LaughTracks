@@ -1,7 +1,11 @@
 <div>
  <div id = "statistics">
-   <%=@comedians.average_age%>
-   <%=@specials.average_run_time%>
+   <ul>
+   <li><%=@comedians.average_age%></li>
+   <li><%=@specials.average_run_time%></li>
+   <li><%=@comedians.unique_cities.join%></li>
+   <li><%=@specials.count%></li>
+  </ul>
  </div>
 
  <div id = "comedian_stats">
@@ -10,6 +14,7 @@
     <li><%=comedian.name%></li>
     <li><%=comedian.city%></li>
     <li><%=comedian.age%></li>
+    <li><%=comedian.specials.count%></li>
     <% comedian.specials.each do |special| %>
     <ul class="specials">
       <li><%=special.name%></li>

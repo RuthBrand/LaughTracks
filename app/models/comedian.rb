@@ -6,5 +6,14 @@ class Comedian < ActiveRecord::Base
   def self.average_age
     average(:age)
   end
-  
+
+  def self.unique_cities
+    #this returns an array but it sort of works
+    pluck(:city).uniq
+  end
+
+  def self.total_specials
+    sum(:specials)
+  end
+
 end
