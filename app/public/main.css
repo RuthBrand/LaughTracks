@@ -1,3 +1,7 @@
+head {
+  color: white;
+}
+
 body {
    background-image: url("https://images.unsplash.com/photo-1508778552286-12d4c6007799?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b252d2788419e72d5671fbe43a6ff5f7&auto=format&fit=crop&w=800&q=60");
    background-color: #cccccc;
@@ -26,17 +30,30 @@ body {
   grid-template-rows: 1;
 }
 
+.statstics_overview{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .total_specials{
   color: white;
 }
 
-.statistics{
-  color: white;
+#statistics{
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background-color: white;
 }
 
 .total_statistics{
   color: white;
 }
+
+
 
 /* .grid-container {
   display: grid;

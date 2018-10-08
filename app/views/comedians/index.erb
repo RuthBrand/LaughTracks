@@ -2,10 +2,10 @@
 
   <div class="total_statistics"><div>
    <div id="statistics">
-     <h3><%=@comedians.average_age%></h3></br>
-     <h3><%=@specials.average_run_time.to_i%></h3></br>
-     <h3><%=@comedians.unique_cities.join(' ')%></h3></br>
-     <h3><%=@specials.count%></h3></br>
+     <span class="statistics_overview"><h3>Average Age</h3><p><%=@comedians.average_age%></p></span></br>
+     <span class="statistics_overview"><h3>Average Special Run Time</h3><%=@specials.average_run_time.to_i%></h3></br>
+     <span class="statistics_overview" id="unique_cities"><h3>Unique Cities</h3><%=@comedians.unique_cities.join(' ')%></span></br>
+     <span class="statistics_overview"><h3>Total Specials</h3><%=@specials.count%></span></br>
    </div>
    </div>
  </div>
