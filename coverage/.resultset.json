@@ -1,6 +1,36 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/ruthbrand/turing/mod_two/laugh_tracks/LaughTracks/spec/features/new_comedian_page_spec.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/ruthbrand/turing/mod_two/laugh_tracks/LaughTracks/spec/features/user_can_see_comedian_page_spec.rb": [
         1,
         1,
@@ -295,6 +325,6 @@
         null
       ]
     },
-    "timestamp": 1538956007
+    "timestamp": 1538957494
   }
 }
