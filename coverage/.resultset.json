@@ -29,6 +29,9 @@
         1,
         1,
         null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/ruthbrand/turing/mod_two/laugh_tracks/LaughTracks/spec/features/user_can_see_comedian_page_spec.rb": [
@@ -325,6 +328,6 @@
         null
       ]
     },
-    "timestamp": 1538957494
+    "timestamp": 1538958132
   }
 }
