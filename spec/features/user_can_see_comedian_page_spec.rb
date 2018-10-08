@@ -102,7 +102,7 @@ end
     comedian_two = Comedian.create(name: "Tyrion Lannister", age: 36, city: "Kings Landing")
 
     visit '/comedians'
-
+    save_and_open_page
     within('#statistics') do
       expect(page).to have_content (40.5)
     end

@@ -1,28 +1,31 @@
-<div>
- <div id = "statistics">
-   <ul>
-   <li><%=@comedians.average_age%></li>
-   <li><%=@specials.average_run_time%></li>
-   <li><%=@comedians.unique_cities.join%></li>
-   <li><%=@specials.count%></li>
-  </ul>
+<div class="grid-container">
+
+  <div class="total_statistics"><div>
+   <div id="statistics">
+     <h3><%=@comedians.average_age%></h3></br>
+     <h3><%=@specials.average_run_time%></h3></br>
+     <h3><%=@comedians.unique_cities.join(' ')%></h3></br>
+     <h3><%=@specials.count%></h3></br>
+   </div>
+   </div>
  </div>
 
-
- <div id = "comedian_stats">
- <% @comedians.each do |comedian| %>
-   <ul class="comedians">
-    <li><%=comedian.name%></li>
-    <li><%=comedian.city%></li>
-    <li><%=comedian.age%></li>
-    <li><%=comedian.specials.count%></li>
-    <% comedian.specials.each do |special| %>
-    <ul class="specials">
-      <li><%=special.name%></li>
-      <li><%=special.run_time%></li>
-      <img src=<%=special.image_url%> />
-    </ul>
-    <% end %>
-   </ul>
-<% end %>
+  <div class="individual_statistics">
+   <div id="comedian_stats">
+   <% @comedians.each do |comedian| %>
+     <div class="comedians">
+      <h2><%=comedian.name%></h2></br>
+      <h2><%=comedian.city%></h2></br>
+      <h2><%=comedian.age%></h2></br>
+      <h2><%=comedian.specials.count%></h2></br>
+      <% comedian.specials.each do |special| %>
+      <div class="specials">
+        <h2><%=special.name%></h2></br>
+        <h2><%=special.run_time%></h2></br>
+        <img src=<%=special.image_url%> /></br>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
 </div>
