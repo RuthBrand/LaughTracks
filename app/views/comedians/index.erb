@@ -3,7 +3,7 @@
   <div class="total_statistics"><div>
    <div id="statistics">
      <h3><%=@comedians.average_age%></h3></br>
-     <h3><%=@specials.average_run_time%></h3></br>
+     <h3><%=@specials.average_run_time.to_i%></h3></br>
      <h3><%=@comedians.unique_cities.join(' ')%></h3></br>
      <h3><%=@specials.count%></h3></br>
    </div>

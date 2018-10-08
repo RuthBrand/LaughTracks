@@ -123,7 +123,7 @@ end
     visit '/comedians'
 
     within('#statistics') do
-      expect(page).to have_content (88.8)
+      expect(page).to have_content (88)
     end
   end
 

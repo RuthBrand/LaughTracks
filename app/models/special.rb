@@ -4,7 +4,7 @@ class Special < ActiveRecord::Base
   validates_presence_of :name
 
   def self.average_run_time
-    average(:run_time)
+    average(:run_time).to_i
   end
 
 end
