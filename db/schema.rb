@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_01_27_204142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comedians", force: :cascade do |t|
+    t.string "name", limit: 60
+    t.integer "age"
+    t.string "city", limit: 60
+  end
+
+  create_table "specials", force: :cascade do |t|
+    t.text "name"
+    t.integer "run_time"
+    t.text "image_url"
+    t.integer "comedian_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
