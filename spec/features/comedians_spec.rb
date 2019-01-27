@@ -1,6 +1,5 @@
 require 'spec_helper'
-require '/comedian.rb'
-
+require 'app/models/comedian.rb'
 RSpec.describe do
   describe "seeing basic comedian information on /comedians" do
        it "displays comedians baseic information" do

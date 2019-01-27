@@ -8,3 +8,6 @@
 #     end
 #   end
 # end
+
+
+#write association test - expect to belong to a comedian
