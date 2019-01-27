@@ -11,16 +11,12 @@ RSpec.describe Comedian do
         expect(comic).to_not be_valid
       end
     end
-  end
 
-  # describe 'attributes' do
-  #   it 'should have a name attribute' do
-  #     @comedian = Comedian.create("John", 23, "Ohio")
-  #
-  #     "John".should equal(@comedian.name)
-  #   end
-  # end
-
-  #write associans about having many specials
-
+   decribe 'Associations' do
+    it 'should have many specials' do
+      association = Special.reflect_on_association(:comedian)
+      expect(association.macro).to eq :belongs_to
+    end
+   end
+ end
 end
