@@ -3,6 +3,13 @@ class Comedian < ActiveRecord::Base
 
   validates_presence_of :name, :city, :age
 
+  def initialize(name, city, age)
+    require 'pry'; binding.pry
+    @name = name
+    @city = city
+    @age = age
+  end
+
   def self.average_age
     average(:age)
   end

@@ -1,5 +1,5 @@
 class CreateComedians < ActiveRecord::Migration[5.2]
-  def change
+  def up
     create_table :comedians do |t|
       #what type of things you want in each column
       t.text :name
