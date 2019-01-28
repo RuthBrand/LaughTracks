@@ -5,3 +5,9 @@
   <h3><li><%=comedian.age%></li></h3>
 </ul>
 <% end %>
+
+<% @comedians.specials.each do |special| %>
+  <%=special.name%>
+  <%=special.run_time%>
+  <%=special.image_url%>
+<% end %>
